@@ -44,6 +44,9 @@ module.exports = (robot) ->
 
   dogapi.initialize(options)
 
+  robot.respond /badger/i, (res) ->
+      res.reply "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+
   robot.respond /datadog monitor me$/i, (res) ->
     output = ''
     dogapi.monitor.getAll (err, response) ->

@@ -2,9 +2,9 @@
   "name": "hubot-datadog-plus",
   "version": "1.1.0",
   "description": "Interact with Datadog monitors, hosts and graphs using Hubot",
-  "main": "index.js",
+  "main": "index.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers coffee:coffee-script/register test/*.coffee"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,12 @@
   "homepage": "https://github.com/alexcreek/hubot-datadog-plus#readme",
   "dependencies": {
     "dogapi": "^2.6.1"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.14.0",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0"
   }
 }
